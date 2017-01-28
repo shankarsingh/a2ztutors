@@ -46,12 +46,21 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+    {   if($data['role'] == 'tutor'){
+            return Validator::make($data, [
+                'name' => 'required|max:255',
+                'email' => 'required|email|max:255|unique:users',
+                'password' => 'required|min:6|confirmed',
+            ]);
+        }else if($data['role'] == 'student'){
+            return Validator::make($data, [
+                'firstname' => 'required|max:255',
+                'lastname' => 'required|max:255',
+                'email' => 'required|email|max:255|unique:users',
+                'password' => 'required|min:6',
+            ]);
+        }
+        
     }
 
     /**
@@ -61,11 +70,27 @@ class RegisterController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+    {   
+        if($data['role'] == 'tutor'){
+            return User::create([
+                'name' => $data['name'],
+                'firstname' => '',
+                'lastname' => '',
+                'mobile' => '',
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'role' => $data['role'],
+            ]);
+        }else if($data['role'] == 'student'){
+            return User::create([
+                'name' => $data['firstname'] .''. $data['lastname'],
+                'firstname' => $data['firstname'],
+                'lastname' => $data['lastname'],
+                'mobile' => $data['mobile'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'role' => $data['role'],
+            ]);
+        }
     }
 }

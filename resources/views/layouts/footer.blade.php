@@ -48,7 +48,7 @@
             <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
         </div>
         <div class="margintop20">
-        <img src="img/logo.svg" style="width: 320px;max-width:100%;padding:0 15px;">
+        <img src="{{ URL::asset('public/img/logo.svg') }}" style="width: 320px;max-width:100%;padding:0 15px;">
         </div>
     </div>
 </div>    

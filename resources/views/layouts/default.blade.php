@@ -21,7 +21,13 @@
 
 </head>
 <body>
-@include('layouts.header')
+@include('auth.login')
+
+@include('auth.register')
+
+@include('auth.register-student')
+
+@yield('content')
 
 
 @include('layouts.footer')

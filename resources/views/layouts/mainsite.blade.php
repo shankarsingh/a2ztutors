@@ -1,147 +1,6 @@
-<div id="login-form">
-<form class="form-container">
-<div class="regcont">
-    <div class="row">
-        <div class="col-md-12">
-            <a class="cross-popup" href="javascript:hide_popup('login-form');"><img src="img/cancel.png"></a>
-        </div>
-        <div class="col-md-12 text-center">
-            <h2>Login Form</h2>
-        </div>
-    </div>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-    <img class="imgy" src="img/login.png" alt="Login">
-</div>
+@extends('layouts.default')
 
-<div class="col-md-12 text-center">
-  <label><b>Username or Email Id *</b></label>
-</div>
-<div class="col-md-12">
-     <input type="text" class="input" placeholder="Enter Username" name="uname" required>
-</div>
-<div class="col-md-12 text-center">
-    <label><b>Password *</b></label>
-</div>
-<div class="col-md-12">
-    <input type="password" class="input" placeholder="Enter Password" name="psw" required>
-</div>
-<div class="col-md-12">
-    <input class="botton" type="submit" value="Login"/>
-</div>
-<div class="col-md-12 text-center">
-    <input type="checkbox" checked="checked" style="margin-top: 21px;"> Remember me
-</div>
-<div class="col-md-12">
-    <a href="index.html"><button class="botton" type="button" class="cancelbtn">Cancel</button></a>
-</div>
-<div class="col-md-12">
-  <span class="psw"><a href="#">Forgot password?</a></span>
-</div>
-</div>
-</form>
-
-</div>
-
-<div id="signup-form">
-<form class="form-container">
-<div class="regcont">
-  <div class="row">
-      <div class="col-md-12">
-        <a class="cross-popup" href="javascript:hide_popup('signup-form');"><img src="img/cancel.png"></a>
-      </div>
-      <div class="col-md-12 text-center">
-        <h2>Registration Form</h2>
-      </div>
-  </div>
-</div>
-<div class="row">
-
-    <div class="col-md-12 text-center">
-      <img src="img/signup.png" alt="Login" class="avatar">
-    </div>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-  <label><b>Username *</b></label>
-</div>
-<div class="col-md-12">
-     <input type="text" class="input" placeholder="Enter Username" name="uname" required>
-</div>
-<div class="col-md-12 text-center">
-   <label><b>Email Address *</b></label>
-</div>
-<div class="col-md-12">
-    <input type="text" class="input" placeholder="Enter Email-ID" name="uname" required>
-</div>
-<div class="col-md-12 text-center">
-    <label><b>Password *</b></label>
-</div>
-<div class="col-md-12">
-    <input type="password" class="input" placeholder="Enter Password" name="psw" required>
-</div>
-<div class="col-md-12">
-    <input class="botton" type="submit" value="Register &#10148"/>
-</div>
-<div class="col-md-12">
-  <span class="psw"><a href="login.html">Already have an account?Log in</a></span>
-</div>
-</div>
-</form>
-</div>
-
-<div id="request-form">
-<form class="form-container">
-<div class="regcont">
-      <div class="row">
-      <div class="col-md-12">
-        <a class="cross-popup" href="javascript:hide_popup('request-form');"><img src="img/cancel.png"></a>
-      </div>
-      <div class="col-md-12 text-center">
-      <h2>Request a Tutor</h2>
-      </div>
-      </div>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-    <img class="imgy" src="img/request.png" style="width: 21%;" alt="Login">
-</div>
-
-<div class="col-md-6 text-center">
-    <input type="text" class="input" placeholder="Subject (Level)" name="subject" required>
-</div>
-<div class="col-md-6">
-     <input type="text" class="input" placeholder="Postcode" name="code" required>
-</div>
-<div class="col-md-12 text-center">
-    <textarea class="input" placeholder="Tell us more about what are you looking for"></textarea>
-</div>
-<div class="col-md-6 text-center">
-    <input type="text" class="input" placeholder="First Name" name="fname" required>
-</div>
-<div class="col-md-6">
-     <input type="text" class="input" placeholder="Last Name" name="lname" required>
-</div>
-<div class="col-md-6 text-center">
-    <input type="text" class="input" placeholder="Email" name="e_mail" required>
-</div>
-<div class="col-md-6">
-     <input type="text" class="input" placeholder="Mobile Number" name="mobile" required>
-</div>
-<div class="col-md-6">
-     <input type="text" class="input" placeholder="Password" name="pass" required>
-</div>
-<div class="col-md-6">
-    <button class="botton submit-botton" type="button">Submit Request</button>
-</div>
-<div class="col-md-12">
-  <p style="float: left;">By clicking this button you're agreeing to our <span style="text-shadow: 0px 0px 2px red;">Terms & Conditions<span></p>
-</div>
-</div>
-</form>
-</div>
-
+@section('content')
 <div class="top-banner">
 <div class="container">
 <!-- menu-->
@@ -154,7 +13,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="#"><img src="img/logo.svg" style="width: 170px;margin: -8px;width: 233px !important;" class="img-responsive"></a>
+  <a class="navbar-brand" href="#"><img src="{{ URL::asset('public/img/logo.svg') }}" style="width: 170px;margin: -8px;width: 233px !important;" class="img-responsive"></a>
 </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -177,7 +36,7 @@
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
     <div class="col-sm-5 search-field">
-        <input class="form-control input-lg" style="font-size: 15px;background-image: url(img/search2.png);
+        <input class="form-control input-lg" style="font-size: 15px;background-image: url({{ URL::asset('public/img/search2.png') }});
 background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;padding-left:40px;border-radius: 5px 0px 0px 5px;" placeholder="What do you need help with?">
     </div>
     <div class="col-sm-5 search-field ">
@@ -210,62 +69,62 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
     <div class="col-md-100">
     <a href="#">
         <div class="box-ban">
-        <img src="img/calculator.png" style="width:40px;">
+        <img src="{{ URL::asset('public/img/calculator.png') }}" style="width:40px;">
             <p>Maths</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/abc-squares.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/abc-squares.png') }}" style="width:40px;">
             <p>English</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/cell.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/cell.png') }}" style="width:40px;">
             <p>Biology</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/h2o.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/h2o.png') }}" style="width:40px;">
             <p>Chemistry</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/atom.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/atom.png') }}" style="width:40px;">
             <p>Physics</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/open-book.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/open-book.png') }}" style="width:40px;">
             <p>11+</p></a>
         </div>
     </div>
     
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/internet.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/internet.png') }}" style="width:40px;">
             <p>French</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/internet.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/internet.png') }}" style="width:40px;">
             <p>Spanish</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/history.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/history.png') }}" style="width:40px;">
             <p>History</p></a>
         </div>
     </div>
     <div class="col-md-100">
         <div class="box-ban">
-        <a href="#"><img src="img/internet.png" style="width:40px;">
+        <a href="#"><img src="{{ URL::asset('public/img/internet.png') }}" style="width:40px;">
             <p>Geography</p></a>
         </div>
     </div>
@@ -287,18 +146,18 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
 <h1>How It Works</h1>
     <div class="row">
         <div class="col-sm-4 teacher">
-            <a href="#"><img src="img/search.png"></a>
+            <a href="#"><img src="{{ URL::asset('public/img/search.png') }}"></a>
             <h3>Select A Private Tutor</h3>
             <p class="space">Use our search engine to find a private tutor near you for any subject from Maths to English to the Piano. You can browse through tutors offering private, one-to-one tuition as well as online tutors.  We ensure that current students can review their tutors so this should ensure peace of mind for you when making a decision!</p>
         </div>
         <div class="col-sm-4 teacher">
-            <a href="#"><img src="img/discuss.png"></a>
+            <a href="#"><img src="{{ URL::asset('public/img/discuss.png') }}"></a>
             <h3>Discuss Your Needs And Arrange A First Lesson</h3>
             <p class="space2">Our website is a safe means by which you can discuss what you  need from your tutor. Message the tutor stating what you need help with ‘e.g. Hi I need support for my daughter who is in year 11 with her English’.
             The tutor will then respond and once you have arranged a first lesson you are ready to go!</p>
         </div>
         <div class="col-sm-4 teacher">
-            <a href="#"><img src="img/learn.png"></a>
+            <a href="#"><img src="{{ URL::asset('public/img/learn.png') }}"></a>
             <h3>Start Learning</h3>
             <p class="space">Once you are ready to hire your tutor, click ‘book now’. Once the tutor accepts you are set to go!
             If you need any support from us after this, please get in touch.</p>
@@ -317,7 +176,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
                 <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/manchester.jpg">
+                <img src="{{ URL::asset('public/img/manchester.jpg') }}">
                     <div class="img-abslt">
                         <h2>MANCHESTER</h2>
                         <h3>Tutors available</h3>
@@ -331,7 +190,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/london.jpg">
+                <img src="{{ URL::asset('public/img/london.jpg') }}">
                 <div class="img-abslt">
                     <h2>LONDON</h2>
                     <h3>Tutors available</h3>
@@ -344,7 +203,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/birmingham.jpg">
+                <img src="{{ URL::asset('public/img/birmingham.jpg') }}">
                 <div class="img-abslt">
                     <h2>BIRMINGHAM</h2>
                     <h3>Tutors available</h3>
@@ -356,7 +215,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/bristol.jpg">
+                <img src="{{ URL::asset('public/img/bristol.jpg') }}">
                 <div class="img-abslt">
                     <h2>BRISTOL</h2>
                     <h3>Tutors available</h3>
@@ -368,7 +227,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/edinburgh.jpg">
+                <img src="{{ URL::asset('public/img/edinburgh.jpg') }}">
                 <div class="img-abslt">
                     <h2>EDINBURGH</h2>
                     <h3>Tutors available</h3>
@@ -380,7 +239,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/glasgow.jpg">
+                <img src="{{ URL::asset('public/img/glasgow.jpg') }}">
                 <div class="img-abslt">
                     <h2>GLASGOW</h2>
                     <h3>Tutors available</h3>
@@ -392,7 +251,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/leeds.jpg">
+                <img src="{{ URL::asset('public/img/leeds.jpg') }}">
                 <div class="img-abslt">
                     <h2>LEEDS</h2>
                     <h3>Tutors available</h3>
@@ -404,7 +263,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/sheffield.jpg">
+                <img src="{{ URL::asset('public/img/sheffield.jpg') }}">
                 <div class="img-abslt">
                     <h2>SHEFFIELD</h2>
                     <h3>Tutors available</h3>
@@ -418,7 +277,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/liverpool.jpg">
+                <img src="{{ URL::asset('public/img/liverpool.jpg') }}">
                 <div class="img-abslt">
                     <h2>LIVERPOOL</h2>
                     <h3>Tutors available</h3>
@@ -431,7 +290,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
             <div class="img-box">
                 <div class="image">
                 <a href="#">
-                <img src="img/bradford.jpg">
+                <img src="{{ URL::asset('public/img/bradford.jpg') }}">
                 <div class="img-abslt">
                     <h2>BRADFORD</h2>
                     <h3>Tutors available</h3>
@@ -447,7 +306,7 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
 <!-- 100per-->
 <div class="p100per paddy">
 <div class="container">
-    <img src="img/100per.png">
+    <img src="{{ URL::asset('public/img/100per.png') }}">
     <h1>100% Satisfaction Guarantee</h1>
     <p>We have done everything we can to ensure a smooth experience for parents and students. If for any reason you are not satisfied with your tutor simply use our easy search form to get another set of details for free. Your happiness is essential to us. </p>
 </div>
@@ -568,3 +427,4 @@ background-repeat: no-repeat;background-position: 9px;margin: 0px;width: 100%;pa
     </div>
 </div>
 </div>
+@endsection

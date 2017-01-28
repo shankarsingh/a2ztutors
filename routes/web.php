@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('/layouts/defualt');
+    return view('layouts/mainsite');
 });
 
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');

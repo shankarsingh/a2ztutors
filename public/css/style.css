@@ -70,13 +70,21 @@
 {
 	padding-top:45px !important
 }
-.top-banner
-{
-	background:url(../img/banner.png) no-repeat; 
-	min-height:644px;
-	padding-top:10px;
-	background-size: 100% 100%;
-
+.top-banner {
+    background: url(../img/banner.png) no-repeat;
+    min-height: 644px;
+    padding-top: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.top-banner-profile {
+	background-color: #000000;
+    min-height: 80px;
+    padding-top: 10px;
+    background-position: center;
+}
+.profile-page {
+	height: 900px;
 }
 .navbar-default
 {
@@ -408,10 +416,8 @@ a:hover {
 	text-align:center;
 	padding:50px 0px;
 }
-.cross-popup {
-	display: block;
-	text-align: right;
-
+.cross {
+	float: right;
 }
 #fade-quote-carousel.carousel {
   padding-bottom: 60px;
@@ -758,4 +764,12 @@ button {
     overflow: hidden;
     outline:none;
     color: white;
+}
+.banner-text .form-control.need-help {
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 9px;
+    margin: 0px;
+    width: 100%;
+    border-radius: 6px 0 0 6px;
 }
